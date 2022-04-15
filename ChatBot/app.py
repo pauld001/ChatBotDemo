@@ -1,8 +1,10 @@
 # importing packages
+from importlib import import_module
 import sys
 from flask import Flask
 from flask import render_template
 from flask import request
+from jinja2 import 
 from chatterbot import ChatBot
 from chatterbot_corpus import corpus
 from chatterbot.trainers import ListTrainer
@@ -40,7 +42,7 @@ def index():
         solent_input = solent.get_response(chatpost)
         print(solent_input)
 
-        
+
     return render_template ('index.html'), print('/chatbot') 
 
    
