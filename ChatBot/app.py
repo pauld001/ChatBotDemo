@@ -1,10 +1,9 @@
 # importing packages
-from importlib import import_module
 import sys
 from flask import Flask
 from flask import render_template
 from flask import request
-from jinja2 import 
+
 from chatterbot import ChatBot
 from chatterbot_corpus import corpus
 from chatterbot.trainers import ListTrainer
@@ -19,7 +18,6 @@ logic_adapters=['chatterbot.logic.BestMatch']
 
 chat = Flask(__name__)
 
-      
            
 
         
@@ -32,6 +30,8 @@ print('working')
 
 
 def index():
+    solent_input = 'Hello i am student the chat bot. ask me a question or query and i will help you',
+ 
     if request.method == 'POST':
         print("post")
         print("post", file=sys.stderr)
@@ -41,9 +41,8 @@ def index():
         print('hi')
         solent_input = solent.get_response(chatpost)
         print(solent_input)
-
-
-    return render_template ('index.html'), print('/chatbot') 
+        
+    return render_template ('index.html', outmessage=solent_input), print('/chatbot')
 
    
 
@@ -89,8 +88,8 @@ trainer.train([
 'computing',
 'here is the computing course',
 'software engineering',
-'here is software engineering course'
-'Computer systems and networks engineering'
+'here is software engineering course',
+'Computer systems and networks engineering',
 'here is systems and networks engineering'
 ])
 
@@ -112,7 +111,8 @@ trainer.train([
 
 
 trainer.train([
-
+'email',
+'here is a link to outlook to acess your solent email: https://www.office.com/ having rrblems contact us at: ...'  
 ])
 
 trainer.train([
@@ -123,7 +123,13 @@ trainer.train([
 trainer.train([
     'news',
     'here is our latest news and events'
-    ])
+])
+
+trainer.train([
+    'libary opening times',
+    'there are the current libary opening times:'
+
+])
 
 
 
