@@ -16,16 +16,12 @@ database_uri='sqlite:///database.sqlite3',
 logic_adapters=['chatterbot.logic.BestMatch']
 )
 
-chat = Flask(__name__)
-
-           
-
-        
+app = Flask(__name__) 
 
 print('working')
 
 
-@chat.route("/chatbot", methods=['POST', 'GET'])
+@app.route("/chatbot", methods=['POST', 'GET'])
 #def index():
 
 
