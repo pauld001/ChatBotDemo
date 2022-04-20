@@ -30,7 +30,7 @@ print('working')
 
 
 def index():
-    solent_input = 'Hello i am student the chat bot. ask me a question or query and i will help you',
+    solent_input = "Hello i am student the chat bot! Ask me a question or query and i will help you"
  
     if request.method == 'POST':
         print("post")
