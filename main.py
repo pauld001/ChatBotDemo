@@ -1,4 +1,5 @@
 # importing packages
+from asyncore import read
 import sys
 from flask import Flask
 from flask import render_template
@@ -10,7 +11,7 @@ from chatterbot.trainers import ListTrainer
 
 #from chatterbot import TimeLogicAdapter
 
-solent = ChatBot("solent",
+solent = ChatBot("solent", read_only=True, 
 storage_adapter='chatterbot.storage.SQLStorageAdapter',
 database_uri='sqlite:///database.sqlite3',
 logic_adapters=['chatterbot.logic.BestMatch']
@@ -108,7 +109,7 @@ trainer.train([
 
 trainer.train([
 'email',
-'here is a link to outlook to acess your solent email: https://www.office.com/ having rrblems contact us at: ...'  
+'here is a link to outlook to acess your solent email: https://www.office.com/ having problems contact us at: ...'  
 ])
 
 trainer.train([
@@ -124,10 +125,11 @@ trainer.train([
 trainer.train([
     'libary opening times',
     'there are the current libary opening times:'
-
 ])
 
-
+trainer.train([
+    ''
+])
 
 
 
