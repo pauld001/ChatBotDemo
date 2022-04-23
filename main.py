@@ -10,6 +10,10 @@ from chatterbot_corpus import corpus
 from chatterbot.trainers import ListTrainer
 
 #from chatterbot import TimeLogicAdapter
+chat = Flask(__name__)
+
+print('working')
+
 
 solent = ChatBot("solent", read_only=True, 
 storage_adapter='chatterbot.storage.SQLStorageAdapter',
@@ -17,9 +21,6 @@ database_uri='sqlite:///database.sqlite3',
 logic_adapters=['chatterbot.logic.BestMatch']
 )
 
-chat = Flask(__name__) 
-
-print('working')
 
 
 @chat.route("/", methods=['POST', 'GET'])
@@ -43,6 +44,8 @@ def index():
 
    
 
+if __name__ == "__main__":
+  chat.run()
 
 
 
