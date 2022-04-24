@@ -16,8 +16,8 @@ blis==0.2.4
 cachetools==5.0.0
 certifi==2019.11.28
 chardet==3.0.4
-ChatterBot
-chatterbot-corpus
+ChatterBot==1.0.5
+chatterbot-corpus==1.2.0
 click==8.1.2
 colorama==0.4.3
 configobj==5.0.6
