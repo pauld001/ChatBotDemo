@@ -16,7 +16,6 @@ print('working')
 
 
 solent = ChatBot("solent", read_only=True, 
-storage_adapter='chatterbot.storage.SQLStorageAdapter',
 database_uri='postgres://nkcguvuabtmujv:6c8384842f707c8db4d64d28ce92554260989edc0813870436a5cfddf968983e@ec2-99-80-170-190.eu-west-1.compute.amazonaws.com:5432/d2t6kvgjuj9m8g',
 logic_adapters=['chatterbot.logic.BestMatch']
 )
