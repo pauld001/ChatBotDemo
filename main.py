@@ -48,7 +48,7 @@ if __name__ == "__main__":
 
 
 
-  trainer = ListTrainer(solent)
+trainer = ListTrainer(solent)
 
 #greetings
 trainer.train([
