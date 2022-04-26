@@ -33,7 +33,7 @@ logic_adapters=['chatterbot.logic.BestMatch']
 
 def index():
     solent_input = "Hello i am student the chat bot! Ask me a question or query and i will help you"
- 
+    chatpost = ''
     if request.method == 'POST':
         print("post")
         print("post", file=sys.stderr)
@@ -44,7 +44,7 @@ def index():
         solent_input = solent.get_response(chatpost)
         print(solent_input)
         
-    return render_template ('index.html', outmessage=solent_input), print('/chatbot')
+    return render_template ('index.html', outmessage=solent_input, usermessage=chatpost), print('/chatbot')
 
    
 
@@ -94,6 +94,12 @@ trainer.train([
 'here is software engineering course',
 'Computer systems and networks engineering',
 'here is systems and networks engineering'
+])
+
+trainer.train([
+'student union'
+'here is a link to the student union'
+
 ])
 
 trainer.train([

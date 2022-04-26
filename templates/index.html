@@ -25,7 +25,9 @@
     <div id="chatbot">
      <p>message</p>
      <div id="output">
-        {{outmessage}}
+
+        <div id="outmessage">{{outmessage}}</div>
+        <div id="usermessage">{{usermessage}}</div>
 
 
      </div>
@@ -86,6 +88,27 @@
     float: left;
     margin-left: 5%;
     
+}
+
+#outmessage{
+    width: 70%;
+    float: left;
+    background-color: rgba(255, 0, 0, 0.500);
+    margin: 3%;
+    border-radius: 7px;
+    font-size: 13px;
+    padding: 2%;
+}
+
+#usermessage{
+    width: 70%;
+    float: right;
+    background-color:rgba(128, 128, 128, 0.500);
+    margin: 3.5%;
+    border-radius: 7px;
+    font-size: 13px;
+    padding: 2%;
+
 }
 p{
  font-size: 12px;
