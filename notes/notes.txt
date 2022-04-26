@@ -81,6 +81,35 @@ trainer.train([
 ])
 
 trainer.train([
-    ''
+    'contact student hub',
+    'please complete this form. and we will get back to you'
 ])
+
+
+#contact
+
+trainer.train([
+    'contact student hub',
+    'please complete this form. and we will get back to you
+    
+    
+    
+    '
+])
+
+trainer.train([
+    'contact student hub',
+    'please complete this form. and we will get back to you'
+])
+
+trainer.train([
+    'contact student registry',
+    'please complete this form. and student registry will get back to you
+    
+    
+    
+    '
+])
+
+
 
