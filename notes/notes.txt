@@ -1,10 +1,8 @@
-
-#training "solent" chatbot
-trainer = ListTrainer(solent)
+trainer = ListTrainer(student)
 
 #greetings
 trainer.train([
-'Hi',
+'Hi''about',
 'Hello i am student the chat bot. ask me a question or query and i will help you',
 
 ])
@@ -18,8 +16,8 @@ trainer.train([
 
 
 trainer.train([
-'map',
-'here is a map of the campus'
+'campus map',
+'here is a map of the campus: https://www.solent.ac.uk/about/documents/east-park-terrace-campus-map.pdf'
 ])
 
 
@@ -27,25 +25,34 @@ trainer.train([
 'i am looking to book openday',
 'here is the form to book an openday'
 ])
-trainer.train([
-'can you help me',
-'yes i can please state how i can help you'
-])
+
 #find a course
 trainer.train([
 'i am looking for a course',
 'which course are you looking for',
 'computing',
-'here is the computing course',
-'software engineering',
-'here is software engineering course',
+'here is the computing course https://www.solent.ac.uk/courses/undergraduate/computing-bsc',
+'software engineering ',
+'here is software engineering course https://www.solent.ac.uk/courses/undergraduate/software-engineering-bsc',
 'Computer systems and networks engineering',
-'here is systems and networks engineering'
+'here is systems and networks engineering https://www.solent.ac.uk/courses/undergraduate/computer-systems-and-networks-engineering-bsc'
+])
+
+trainer.train([
+'opendays',
+'here are the upcoming opendays: undergraduate: 28th april 2022, cadetship: 14th may 2022, Postgraduate: 18th may 2022. See more here https://www.solent.ac.uk/open-days'
+
+])
+
+trainer.train([
+'student union',
+'here is a link to the student union'
+
 ])
 
 trainer.train([
 'student hand book',
-'here is a link to the student handbook'
+'here is a link to download and read the student handbook https://students.solent.ac.uk/official-documents/quality-management/student-handbook.pdf'
 
 ])
 
@@ -62,60 +69,58 @@ trainer.train([
 
 trainer.train([
 'email',
-'here is a link to outlook to acess your solent email: https://www.office.com/ having problems contact us at: ...'  
+'here is a link to outlook to acess your solent email click hear to sign in: https://www.office.com/ having problems contact us at: ...'  
 ])
 
 trainer.train([
     'about solent',
-    '"information about solent university"'
+    'Solent University is all about creating opportunities: for its students, for its staff, for its partners. It offers expertise and experiences you couldnt get anywhere else, opening doors and making introductions. see more here: https://www.solent.ac.uk/about '
 ])
 
 trainer.train([
-    'news',
-    'here is our latest news and events'
+    'news''events',
+    'here is our latest news and events https://students.solent.ac.uk/events'
 ])
 
 trainer.train([
-    'libary opening times',
-    'there are the current libary opening times:'
+    'library opening times',
+    'Tuesday 19th April from 8.30am - Friday 20th May up to 11.45pm: The Library will be open 24/7 see more here: https://libguides.solent.ac.uk/libraryessentials'
 ])
-
-
 
 trainer.train([
     'contact student hub',
     'please complete this form. and we will get back to you'
 ])
 
-
-
-#contact
-
 trainer.train([
-    'contact student hub',
-    'please complete this form. and we will get back to you
-    
-    
-    
-    '
+    'contact student union',
+    'please complete this form. and we will get back to you. additionaly you can find information on the Student union website https://www.solentsu.co.uk/'
 ])
 
 
-
-
 trainer.train([
     'contact student hub',
-    'please complete this form. and we will get back to you'
+    'please complete this form. and we will get back to you '
 ])
 
 trainer.train([
     'contact student registry',
-    'please complete this form. and student registry will get back to you
-    
-    
-    
-    '
+    'please complete this form, or email student.registry@solent.ac.uk, and we will get back to you'
 ])
 
 
+trainer.train([
+    'covid-19',
+    'please read the latest information from the government. https://students.solent.ac.uk/news/covid-19-government-update-tuesday-21-february'
+])
 
+
+trainer.train([
+'livechat''agent',
+'transferring you to a member of our team. who will be ready to help you'
+])
+
+trainer.train([
+    'my accommodation',
+    'https://students.solent.ac.uk/university-life/accommodation'
+])
