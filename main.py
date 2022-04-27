@@ -19,7 +19,7 @@ database_uri='postgres://vydwsmdsbhnigz:1615d83289a217bc52c3cde49fbf59ea2675e9af
       #test uri
 #database_uri='sqlite:///database.sqlite3',
 storage_adapter="chatterbot.storage.SQLStorageAdapter",
-logic_adapters=[{'import_path':'chatterbot.logic.BestMatch'}])
+logic_adapters=['chatterbot.logic.BestMatch'])
 
 
 
