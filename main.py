@@ -13,7 +13,7 @@ chat = Flask(__name__)
 print('working')
 
 
-student = ChatBot("student",read_only=True,
+student = ChatBot("student",
       #heroku uri
 #database_uri='postgres://vydwsmdsbhnigz:1615d83289a217bc52c3cde49fbf59ea2675e9af7ee1f1940e3af3bdb41b498a@ec2-52-30-159-47.eu-west-1.compute.amazonaws.com:5432/d2trrt3fbq5gui',
       #test uri
