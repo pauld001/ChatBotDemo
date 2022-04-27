@@ -15,9 +15,9 @@ print('working')
 
 student = ChatBot("student",read_only=True,
       #heroku uri
-database_uri='postgres://vydwsmdsbhnigz:1615d83289a217bc52c3cde49fbf59ea2675e9af7ee1f1940e3af3bdb41b498a@ec2-52-30-159-47.eu-west-1.compute.amazonaws.com:5432/d2trrt3fbq5gui',
+#database_uri='postgres://vydwsmdsbhnigz:1615d83289a217bc52c3cde49fbf59ea2675e9af7ee1f1940e3af3bdb41b498a@ec2-52-30-159-47.eu-west-1.compute.amazonaws.com:5432/d2trrt3fbq5gui',
       #test uri
-#database_uri='sqlite:///database.sqlite3',
+database_uri='sqlite:///database.sqlite3',
 storage_adapter="chatterbot.storage.SQLStorageAdapter",
 logic_adapters=['chatterbot.logic.BestMatch'])
 
@@ -29,7 +29,7 @@ logic_adapters=['chatterbot.logic.BestMatch'])
 
 def index():
     student_input = "Hello i am student your assistant! Ask me a question or query and i will help you"
-    chatpost = ''
+    chatpost = 'hi'
     if request.method == 'POST':
         #print("post")
         #print("post", file=sys.stderr)
