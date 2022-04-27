@@ -17,11 +17,11 @@ print('working')
 
 student = ChatBot("student",
       #heroku uri
-#database_uri='postgres://nkcguvuabtmujv:6c8384842f707c8db4d64d28ce92554260989edc0813870436a5cfddf968983e@ec2-99-80-170-190.eu-west-1.compute.amazonaws.com:5432/d2t6kvgjuj9m8g',
+database_uri='postgres://nkcguvuabtmujv:6c8384842f707c8db4d64d28ce92554260989edc0813870436a5cfddf968983e@ec2-99-80-170-190.eu-west-1.compute.amazonaws.com:5432/d2t6kvgjuj9m8g',
       #test uri
-database_uri='sqlite:///database.sqlite3',
+#database_uri='sqlite:///database.sqlite3',
 storage_adapter="chatterbot.storage.SQLStorageAdapter",
-logic_adapters=[{'import_path':'chatterbot.logic.BestMatch', 'maximum_similarity_threshold': 0.75, 'default_response': 'i currently do not know the answer to this message! Please try again.'}])
+logic_adapters=[{'import_path':'chatterbot.logic.BestMatch'}])
 
 
 
@@ -33,8 +33,8 @@ def index():
     student_input = "Hello i am student your assistant! Ask me a question or query and i will help you"
     chatpost = ''
     if request.method == 'POST':
-        print("post")
-        print("post", file=sys.stderr)
+        #print("post")
+        #print("post", file=sys.stderr)
         #chatpost = input "solent_input"
         chatpost = request.form['solent_input']
         print(chatpost)
@@ -83,11 +83,11 @@ trainer.train([
 'i am looking for a course',
 'which course are you looking for',
 'computing',
-'here is the computing course',
-'software engineering',
-'here is software engineering course',
+'here is the computing course https://www.solent.ac.uk/courses/undergraduate/computing-bsc',
+'software engineering ',
+'here is software engineering course https://www.solent.ac.uk/courses/undergraduate/software-engineering-bsc',
 'Computer systems and networks engineering',
-'here is systems and networks engineering'
+'here is systems and networks engineering https://www.solent.ac.uk/courses/undergraduate/computer-systems-and-networks-engineering-bsc'
 ])
 
 trainer.train([
@@ -126,7 +126,7 @@ trainer.train([
 
 trainer.train([
     'about solent',
-    '"information about solent university"'
+    'Solent University is all about creating opportunities: for its students, for its staff, for its partners. It offers expertise and experiences you couldnt get anywhere else, opening doors and making introductions. see more here: https://www.solent.ac.uk/about '
 ])
 
 trainer.train([
@@ -161,5 +161,18 @@ trainer.train([
 ])
 
 
+trainer.train([
+    'covid-19',
+    'please read the latest information from the government. https://students.solent.ac.uk/news/covid-19-government-update-tuesday-21-february'
+])
 
 
+trainer.train([
+'livechat''agent',
+'transferring you to a member of our team. who will be ready to help you'
+])
+
+trainer.train([
+    'my accommodation',
+    'https://students.solent.ac.uk/university-life/accommodation'
+])
