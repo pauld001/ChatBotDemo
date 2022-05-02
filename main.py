@@ -6,8 +6,8 @@ from flask import request
 from chatterbot import ChatBot
 from chatterbot_corpus import corpus
 from chatterbot.trainers import ListTrainer
-
 #from chatterbot import TimeLogicAdapter
+
 chat = Flask(__name__)
 
 print('working')
