@@ -6,9 +6,10 @@ note due to hosting service
 
 to run applicatation locally
 download python: recommended python-3.8.13
-install required packages plus dependencies:
+install required packages plus required dependencies: (pip install "packagename")
 chatterbot
+chatterbot_corpus
 flask
 
-run command flask run
+run command "flask run" in project directory.
 
